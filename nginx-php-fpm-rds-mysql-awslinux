@@ -1,0 +1,16 @@
+//update
+sudo su -
+yum update
+
+//install package
+yum install nginx php-fpm php-xml php-pdo php-odbc php-soap php-common php-cli php-mbstring php-bcmath php-ldap php-imap php-gd php-pecl-apc 
+
+//install php mysql
+yum install php-mysql
+
+//auto start apps
+chkconfig nginx on
+chkconfig php-fpm on
+
+//configure it to use a socket connection
+nano /etc/php-fpm.conf
